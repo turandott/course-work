@@ -1,6 +1,6 @@
 class PropertsController < ApplicationController
   before_action :set_propert, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_account!, only: [:new, :create, :destroy]
   # GET /properts or /properts.json
   def index
     @properts = Propert.all
@@ -22,7 +22,7 @@ class PropertsController < ApplicationController
   # POST /properts or /properts.json
   def create
     @propert = Propert.new(propert_params)
-
+    @propert.account_id = current_account.id
     respond_to do |format|
       if @propert.save
         format.html { redirect_to propert_url(@propert), notice: "Propert was successfully created." }
