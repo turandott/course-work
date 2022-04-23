@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get "/dashboard" => 'dashboard#index', as: :dashboard
-  get 'dashboard/properts'
-  get 'dashboard/reports'
+  # get 'dashboard/properts'
+  # get 'dashboard/reports'
+
   resources :properts
   devise_for :accounts
   root to: 'public#main'
