@@ -1,6 +1,7 @@
 class PropertsController < ApplicationController
   before_action :set_propert, only: %i[ show edit update destroy ]
   before_action :authenticate_account!, only: [:new, :create, :destroy]
+  before_action :set_sidebar, except: [:show]
   # GET /properts or /properts.json
   def index
     @properts = Propert.all
@@ -8,6 +9,7 @@ class PropertsController < ApplicationController
 
   # GET /properts/1 or /properts/1.json
   def show
+    @agent = @propert.account
   end
 
   # GET /properts/new
@@ -63,8 +65,13 @@ class PropertsController < ApplicationController
       @propert = Propert.find(params[:id])
     end
 
+  def set_sidebar
+    @show_sidebar = true
+  end
+
     # Only allow a list of trusted parameters through.
     def propert_params
-      params.require(:propert).permit(:name, :address, :price, :rooms, :bathrooms)
+      params.require(:propert).permit(:name, :address, :price, :rooms, :bathrooms, :photo)
+      # params.require(:propert).permit(:name, :address, :price, :rooms, :bathrooms, :photo, :photo_cache)
     end
 end

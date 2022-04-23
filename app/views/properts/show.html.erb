@@ -1,5 +1,12 @@
-
-<p>
+<!--<div class="propert-main-photo" style="background-image: url('<%#= propert_photo_url @propert %>')">-->
+      <%#= propert_photo(@propert) %>
+  <div class="photo-overlay">
+</div>
+</div>
+      <div class="container ">
+        <div class="row">
+          <div class="col-8">
+      <p>
   <strong>Name:</strong>
   <%= @propert.name %>
 </p>
@@ -24,5 +31,12 @@
   <%= @propert.bathrooms %>
 </p>
 
-<%= link_to 'Edit', edit_propert_path(@propert) %> |
-<%= link_to 'Back', properts_path %>
+<!--<%#= link_to 'Edit', edit_propert_path(@propert), class: "btn btn-success" %> |-->
+<%#= link_to 'Back', properts_path %>
+    </div>
+          <div class="col-4">
+            <% render "properts/agent_details" %>
+<!--            Agent info-->
+        </div>
+  </div>
+</div>

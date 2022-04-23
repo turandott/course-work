@@ -26,6 +26,22 @@
     <%= form.number_field :bathrooms, class:"form-control" %>
   </div>
 <br>
+  <div class="form-group">
+    <%#= form.label :photo %>
+    <%#= form.file_field :photo, class: "form-control" %>
+    <%#= form.hidden_field :photo_cache %>
+
+    <%# if @propert.photo.present? %>
+    <%#= image_tag @propert.photo.thumb.url, class: "mt-4" %>
+      <%# end %>
+
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+    <%#= image_tag @propert.photo %>
+    <%# if @propert.photo.present? %>
+    <%#= image_tag @propert.photo.thumb.url, class: "mt-4" %>
+  </div>
+
   <div class="actions">
     <%= form.submit "Save", class:"btn btn btn-success"%>
   </div>

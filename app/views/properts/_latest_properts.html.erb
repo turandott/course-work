@@ -1,0 +1,13 @@
+<% @properts.each do |propert| %>
+  <div class="col-3">
+    <%#= link_to( propert_path(propert)) %>
+    <%#= image_tag propert.photo.variant(resize_to_limit: [150, nil]) %>
+    <%= image_tag(propert.photo.variant(resize_to_limit: [150, 150])) if propert.photo.attached? %>
+    <h3 class="h5 mt-4"><%= link_to propert.name, propert_path(propert) %></h3>
+    <p><%= propert.name %></p>
+    <div class="amenities">
+    <span></span>
+    <span></span>
+    </div>
+  </div>
+<% end %>
