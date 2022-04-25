@@ -10,6 +10,7 @@ class PropertsController < ApplicationController
   # GET /properts/1 or /properts/1.json
   def show
     @agent = @propert.account
+    @agent_properts = Propert.where(account_id: @agent.id).where.not(id: @propert.id)
   end
 
   # GET /properts/new
