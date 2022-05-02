@@ -71,12 +71,19 @@
 
     <div class="col-md-4">
       <%= render "properts/agent_details" %>
+
+<!--      <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0"-->
+<!--              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhYk_LJJCI2uM9GW8IA&q=<%#= @propert.address.to_param %>"allowfullscreen>-->
+<!--      </iframe>-->
     </div>
   </div>
 </div>
 <section class="mt-5 mb-5">
   <div class="container">
     <div class="row">
+      <div class="col-12">
+        <p class="h3 mb-3">Other properties by this agent</p>
+      </div>
       <%= render "properts/list", properts: @agent_properts %>
     </div>
   </div>
