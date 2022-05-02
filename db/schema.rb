@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_25_103424) do
+ActiveRecord::Schema.define(version: 2022_05_02_120400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(version: 2022_04_25_103424) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "parking_spaces"
     t.text "details"
+    t.boolean "for_sale", default: false
+    t.datetime "available_date"
     t.index ["account_id"], name: "index_properts_on_account_id"
   end
 
