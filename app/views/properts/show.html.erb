@@ -1,6 +1,6 @@
-<div class="propert-main-photo" >
+<div class="propert-main-photo" style="background-image:url('<%= propert_photo_url @propert %>')">
       <%#= propert_photo(@propert) %>
-  <%= image_tag(@propert.photo.variant(resize_to_limit: [500, 500])) if @propert.photo.attached? %>
+  <%#= image_tag(@propert.photo.variant(resize_to_limit: [500, 500])) if @propert.photo.attached? %>
   <div class="photo-overlay">
 </div>
 </div>
@@ -88,3 +88,5 @@
     </div>
   </div>
 </section>
+<% render "properts/send_email_modal" %>
+
