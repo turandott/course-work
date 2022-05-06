@@ -5,6 +5,7 @@ class AdminController < ApplicationController
     @accounts = Account.where(admin: false)
   end
   def can_access?
+    @show_sidebar=true
     unless  current_account.admin?
       redirect_to root_url
     end
