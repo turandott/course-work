@@ -70,11 +70,22 @@
     </div>
 
     <div class="col-md-4">
-      <%= render "properts/agent_details" %>
+      <%= render "properts/agent_details", agent: @agent %>
 
 <!--      <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0"-->
-<!--              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhYk_LJJCI2uM9GW8IA&q=<%#= @propert.address.to_param %>"allowfullscreen>-->
+<!--              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBbGMlLS-iVOBJ1FK3RTbNMbBcIXb7TwUM&q=<%#= @propert.address.to_param %>"allowfullscreen>-->
 <!--      </iframe>-->
+<!--      <iframe-->
+<!--        width="600"-->
+<!--        height="450"-->
+<!--        style="border:0"-->
+<!--        loading="lazy"-->
+<!--        allowfullscreen-->
+<!--        referrerpolicy="no-referrer-when-downgrade"-->
+<!--        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBbGMlLS-iVOBJ1FK3RTbNMbBcIXb7TwUM-->
+<!--    &q=Space+Needle,Seattle+WA">-->
+<!--      </iframe>-->
+<!--      <iframe width="300" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=<%#= @propert.address.to_param %>" allowfullscreen> </iframe>-->
     </div>
   </div>
 </div>
@@ -88,5 +99,5 @@
     </div>
   </div>
 </section>
-<% render "properts/send_email_modal" %>
+<% render "properts/send_email_modal", agent: @agent %>
 

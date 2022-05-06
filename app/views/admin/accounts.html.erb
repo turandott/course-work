@@ -1,0 +1,18 @@
+<h2>Accounts</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>First name</th>
+    <th>Email</th>
+    <th>Created at</th>
+    <th></th>
+  </tr>
+  <% @accounts.each do |account| %>
+    <tr>
+      <td><%= account.full_name %></td>
+      <td> <%= account.email %></td>
+      <td><%= account.created_at.strftime("%d %m %Y") %></td>
+      <td><%= link_to "View profile", profile_path(account.id) %></td>
+    </tr>
+  <%end%>
+</table>
