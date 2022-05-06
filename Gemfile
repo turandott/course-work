@@ -4,7 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 gem 'devise'
 gem 'image_processing'
-# gem 'carrierwave', "0.10.0"
+gem 'kaminari'
+# gem 'font-awesome-sass', '~> 4.3.0'
 # gem 'fog','~> 1.37.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'

@@ -15,6 +15,7 @@
   </thead>
 
   <tbody>
+
     <% @properts.each do |propert| %>
       <tr>
         <td><%= propert.name %></td>
@@ -30,6 +31,7 @@
   </tbody>
 </table>
 
+<%= paginate @properts %>
 <br>
 
 <%= link_to 'New Propert', new_propert_path, class: "btn btn-success" %>
