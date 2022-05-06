@@ -5,6 +5,8 @@ class Account < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
   has_one_attached :image
+  has_one_attached :cover_image
+
   has_many :properts
 
   def full_name

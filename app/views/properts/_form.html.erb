@@ -37,6 +37,12 @@
   </div>
 
   <div class="form-group">
+    <% opts = @propert.for_sale? ? {"Available" => "available", "Sold" => "sold"} : {"Available" => "available", "Leased" => "leased"} %>
+    <%= form.label :status %>
+    <%= form.select :status, options_for_select(opts, @propert.status), class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :available_date %>
     <%= form.date_field :available_date, class:"form-control",required: true %>
   </div>
