@@ -1,4 +1,5 @@
 class Propert < ApplicationRecord
+  paginates_per 3
   # mount_uploader :photo, PhotoUploader
   belongs_to :account
   has_one_attached :photo
