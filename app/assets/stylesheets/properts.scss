@@ -1,29 +1,28 @@
-// Place all the styles related to the Properts controller here.
-// They will automatically be included in application.scss.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-.propert-thumb{
+.propert-thumb {
   height: 170px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+
   a {
     display: block;
     width: 100%;
     height: 100%;
   }
 }
-.propert-main-photo{
-  //padding-top: 0px;
-  height:  600px;
+
+.propert-main-photo {
+  height: 600px;
   background-size: cover;
   margin-bottom: 40px;
   background-position-y: center;
-  padding-top: 56px;
 }
+
 #prop-details {
   height: 150px;
   overflow: hidden;
-&.open{
-  height: auto;
-}
+
+  &.open{
+    height: auto;
+  }
 }
