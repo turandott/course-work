@@ -4,7 +4,10 @@ class PropertsController < ApplicationController
   before_action :set_sidebar, except: [:show]
   # GET /properts or /properts.json
   def index
-    @properts = Propert.order(:name).page params[:page]
+
+    @q = Propert.ransack(params[:q])
+    @properts = @q.result(distinct: true).page(params[:page])
+    # @properts = Propert.order(:name).page params[:page]
   end
 
   # GET /properts/1 or /properts/1.json

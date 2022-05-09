@@ -5,6 +5,7 @@ ruby '3.0.0'
 gem 'devise'
 gem 'image_processing'
 gem 'kaminari'
+gem 'ransack'
 # gem 'font-awesome-sass', '~> 4.3.0'
 # gem 'fog','~> 1.37.0'
 

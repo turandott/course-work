@@ -1,15 +1,28 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1 class="h3">Properts</h1>
+
+
+<%= search_form_for @q do |f| %>
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
+
+  <%= f.label :address_cont %>
+  <%= f.search_field :address_cont %>
+
+  <%= f.submit "search" %>
+<% end %>
 
 <table class="table table-stripped">
   <thead>
     <tr>
+<!--     <th> <%#= sort_link(@q, :name) %></th>-->
       <th>Name</th>
       <th>Address</th>
-      <th>Price</th>
-      <th>Rooms</th>
-      <th>Bathrooms</th>
+      <th> <%= sort_link(@q, :price) %></th>
+      <th> <%= sort_link(@q, :rooms) %></th>
+      <th> <%= sort_link(@q, :bathrooms) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
