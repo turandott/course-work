@@ -1,7 +1,9 @@
 <div class="text-center border pt-4 pb-5 ml-lg-4">
 
   <div class="mb-2">
-    <%= profile_picture @agent %>
+    <%#= image_tag url_for(@agent.profile_picture), class: "float-right mb-4 ml-4" if @agent.profile_picture.attached? %>
+
+    <%= profile_picture @agent  if @agent.image.attached? %>
   </div>
 <!--  <div class="mb-2">-->
     <%#= image_tag(@agent.image.variant(resize_to_limit: [250, 250])) if @agent.image.attached? %>
