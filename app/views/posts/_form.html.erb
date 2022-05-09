@@ -34,9 +34,8 @@
   <div class="form-group">
     <%= form.label :photo %>
     <%= form.file_field :photo, class: "form-control" %>
-    <%#= form.hidden_field :photo_cache %>
     <% if @post.photo.attached? %>
-      <%= image_tag(@propert.photo, width: 300, class: "img-fluid") %>
+      <%= image_tag(@post.photo, width: 300, class: "img-fluid") %>
     <% end %>
   </div>
 

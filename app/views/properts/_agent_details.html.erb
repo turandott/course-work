@@ -5,9 +5,6 @@
 
     <%= profile_picture @agent  if @agent.image.attached? %>
   </div>
-<!--  <div class="mb-2">-->
-    <%#= image_tag(@agent.image.variant(resize_to_limit: [250, 250])) if @agent.image.attached? %>
-<!--  </div>-->
 
 
  <h3 class="h4"><%= @agent.full_name %></h3>
@@ -15,7 +12,7 @@
 
   <div class="row">
     <div class="col-12">
-      <button class="btn btn-block btn-info text-uppercase mb-3", id="show_tel" data-telephone="<%= @agent.telephone %>"><i class="fas fa-phone mr-2"></i> <span>Call</span></button>
+      <button class="btn btn-block btn-info text-uppercase mb-3" data-telephone="<%= @agent.telephone %>"></i> <span>Call</span></button>
     </div>
   </div>
 
