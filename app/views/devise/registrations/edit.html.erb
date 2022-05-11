@@ -27,7 +27,7 @@
 
   <div class="field">
     <%= f.label :telephone %><br />
-    <%= f.email_field :telephone,  autocomplete: "telephone" %>
+    <%= f.text_field :telephone,  autocomplete: "telephone" %>
   </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -37,7 +37,7 @@
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
-      <br />
+      <br/>
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
